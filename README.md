@@ -4,7 +4,8 @@ To Run
 
 git clone the folder, then run
 
-$ npm i ##install
+$ npm i 
+##install
 
 $ npm start
 
