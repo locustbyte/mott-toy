@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Toy Robot for MottMac</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-lg-4">
+            <h1>Robot Move Area</h1>
+            <div class="table">
+                <div class="robot"></div>
+            </div>
+            <div class="control-group main">
+
+                <label>X Coordinate</label>
+                <input class='placeX form-control' type='number' value='0' />
+
+                <label>Y Coordinate</label>
+                <input class='placeY form-control' type='number' value='0' />
+
+                <label>Direction Facing</label>
+                <select class='placeDirection'>
+                    <option value='NORTH' selected="selected">North</option>
+                    <option value='SOUTH'>South</option>
+                    <option value='EAST'>East</option>
+                    <option value='WEST'>West</option>
+                </select>
+
+                <button class="place">Place</button>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <h1>Controls</h1><small> Click any of the buttons below to instruct robot. <b>Don't forget</b> to <b>PLACE</b> the robot on the <b>Robot Move Area</b> first!</small>
+
+            <div class="control-group flex">
+                <button class="move">Move<br /><small>Moves robot 1 space in facing direction</small></button>
+                <button class="rotateLeft">Rotate Left<br /><small>Rotates robot 90 degrees left</small></button>
+                <button class="rotateRight">Rotate Right<br /><small>Rotates robot 90 degrees right</small></button>
+                <button class="report">Report<br /><small>Get robot's current position</small></button>
+                <button class="remove">Remove<br /><small>Removes the robot from the area</small></button>
+            </div>
+            <h4>Multiple Commands</h4>
+            <p><b>BE SURE</b> to leave one command per line.</p>
+            <small>You should place the robot first using: PLACE (It will use the <b>X</b> &amp; <b>Y</b> and the
+                <b>Direction</b> from the controls on the left).</small><br />
+            <small>You can use: MOVE, LEFT, RIGHT, REPORT.</small>
+            <div>
+                <textarea id="multipleCommands" style="width: 100%; height: 80px;"></textarea>
+                <button class="submitMultiple btn btn-md btn-dark btn-block">Submit Multiple</button>
+            </div>
+            <br />
+            <h4>Log</h4>
+            <div class="log"></div>
+        </div>
+    </div>
+
+
+
+    <div class="controls">
+
+    </div>
+
+    <script src="/bundle.js"></script>
+</body>
+
+</html>

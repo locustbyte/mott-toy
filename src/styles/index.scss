@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 40px;
+  font-family: sans-serif;
+}
+
+.wrap {
+  display: flex;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.field {
+  width: 500px;
+}
+
+.controls {
+  width: calc(100% - 540px);
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: 40px;
+  background-color: rgb(60, 60, 70);
+}
+
+button {
+  background-color: rgb(90, 90, 90);
+  border: none;
+  color: rgb(240, 240, 240);
+
+  &:hover{
+    cursor: pointer;
+    background-color: rgb(100, 100, 100);
+  }
+  &.place {
+    color: rgb(40, 40, 40);
+    background-color: rgb(130, 240, 130);
+  }
+  &.remove {
+    color: rgb(240, 240, 240);
+    background-color: rgb(250, 100, 100);
+  }
+}
+
+
+
+
+label {
+  margin-bottom: 5px;
+}
+
+.control-group button,
+.control-group input,
+.control-group select {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.control-group.flex {
+  display: flex;
+}
+
+.control-group.flex button {
+  flex: 1;
+}
+
+.log {
+  height: 200px;
+  overflow: auto;
+  background-color: rgb(236, 236, 236);
+  padding: 20px;
+  border: 1px solid grey;
+}
+
+.table {
+  margin: 0 auto;
+  width: 50%;
+  border: 1px solid grey;
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+.robot {
+  display: none;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  padding: 40px 5px;
+  text-align: center;
+  background-color: blue;
+  background: url('/assets/img/johnny-5-png-4.png');
+  background-size: cover;
+  border: 1px solid grey;
+  transition: bottom 0.3s ease-in-out, left 0.3s ease-in-out;
+    img {
+      width: 90%;
+    }
+}
+
+.placed {
+  display: block;
+}
+
+.robot[data-direction="north"] {
+  transform: rotate(0deg);
+}
+
+.robot[data-direction="south"] {
+  transform: rotate(180deg);
+}
+
+.robot[data-direction="east"] {
+  transform: rotate(90deg);
+}
+
+.robot[data-direction="west"] {
+  transform: rotate(270deg);
+}
+
+@import "~bootstrap/scss/bootstrap";
+
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Optional
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
